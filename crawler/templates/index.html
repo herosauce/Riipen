@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LinkedIn Search</title>
+    <!-- Font Awesome -->
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<!-- Bootstrap -->
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+<!-- Material Design for Bootstrap -->
+<link href="{% static 'css/mdb.css' %}" rel="stylesheet">
+    <!-- MDBootstrap Datatables -->
+<link href="{% static 'css/addons/datatables.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+</head>
+<body>
+
+  <div class="maindiv">
+    <form action="/crawl/{{ key }}" >
+        <input type="submit" value="Get More Data"/>
+    </form>
+  </div>
+
+  <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th class="th-sm sorting">Name
+
+      </th>
+      <th class="th-sm">LinkedIn URL
+
+      </th>
+      <th class="th-sm">Certifications
+
+      </th>
+      <th class="th-sm">Current Job
+
+      </th>
+      <th class="th-sm">Previous Companies
+
+      </th>
+      <th class="th-sm">Profile Updated
+
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for profile in profiles %}
+    <tr {% if profile.is_updated == 1 %} style="background-color: yellow" {% endif %}>
+        <td>{{ profile.name }}</td>
+        <td><a href="{{ profile.linkedin_url }}">{{ profile.linkedin_url }}</a></td>
+        <td>{{ profile.certifications }}</td>
+        <td>{{ profile.current_job }}</td>
+        <td>{{ profile.companies }}</td>
+        <td>{{ profile.is_updated }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  </table>
+
+<!-- jQuery -->
+<script src="{% static 'js/jquery.js' %}"></script>
+
+<!-- Popper.js -->
+<script src="{% static 'js/popper.js' %}"></script>
+
+<!-- Bootstrap -->
+<script src="{% static 'js/bootstrap.js' %}"></script>
+
+<!-- Material Design for Bootstrap -->
+<script src="{% static 'js/mdb.js' %}"></script>
+
+  <script type="text/javascript">
+$(document).ready(function () {
+  $('#dtBasicExample').DataTable();
+  $('.dataTables_length').addClass('bs-select');
+});
+</script>
+      <!-- MDBootstrap Datatables -->
+<script type="text/javascript" src="{% static 'js/addons/datatables.min.js' %}"></script>
+</body>
+</html>
