@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module crawler.views</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="crawler.html"><font color="#ffffff">crawler</font></a>.views</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/bijayalaxmipanda/Desktop/Books/fourth_sem/ser517/git/p7_honeydew/crawler/views.py">/Users/bijayalaxmipanda/Desktop/Books/fourth_sem/ser517/git/p7_honeydew/crawler/views.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="requests.html">requests</a><br>
+<a href="time.html">time</a><br>
+</td><td width="25%" valign=top><a href="selenium.webdriver.html">selenium.webdriver</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-crawler"><strong>crawler</strong></a>(request, query)</dt><dd><tt>Use&nbsp;google&nbsp;custom&nbsp;engine&nbsp;to&nbsp;search&nbsp;linkedin&nbsp;profiles&nbsp;<br>
+with&nbsp;relevant&nbsp;certifications&nbsp;input&nbsp;given&nbsp;by&nbsp;user<br>
+&nbsp;<br>
+Parameters:<br>
+request:&nbsp;HTTP&nbsp;request<br>
+query:&nbsp;User&nbsp;selection&nbsp;from&nbsp;UI<br>
+&nbsp;<br>
+Returns:<br>
+The&nbsp;web&nbsp;page&nbsp;with&nbsp;all&nbsp;relevant&nbsp;user&nbsp;profiles</tt></dd></dl>
+ <dl><dt><a name="-crawler_rpf"><strong>crawler_rpf</strong></a>(request)</dt><dd><tt>Main&nbsp;method&nbsp;to&nbsp;initiate&nbsp;crawling&nbsp;for&nbsp;RFPs<br>
+&nbsp;<br>
+Parameters:<br>
+request:&nbsp;HTTP&nbsp;request<br>
+&nbsp;<br>
+Returns:<br>
+RFP&nbsp;web&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-get_contract_description"><strong>get_contract_description</strong></a>(contract_url, driver)</dt><dd><tt>Extract&nbsp;description,&nbsp;number&nbsp;for&nbsp;each&nbsp;URL<br>
+&nbsp;<br>
+Parameters:<br>
+contract_url&nbsp;:&nbsp;list&nbsp;of&nbsp;contract&nbsp;url<br>
+driver:&nbsp;Selenium&nbsp;driver<br>
+&nbsp;<br>
+Returns:<br>
+Return&nbsp;all&nbsp;contract&nbsp;details</tt></dd></dl>
+ <dl><dt><a name="-get_contracts"><strong>get_contracts</strong></a>(driver)</dt><dd><tt>Get&nbsp;all&nbsp;contracts&nbsp;url&nbsp;through&nbsp;scrapping&nbsp;from&nbsp;websites<br>
+&nbsp;<br>
+Parameters:<br>
+driver:&nbsp;Chrome&nbsp;web&nbsp;driver<br>
+&nbsp;<br>
+Returns:<br>
+return&nbsp;list&nbsp;of&nbsp;contract&nbsp;urls</tt></dd></dl>
+ <dl><dt><a name="-get_individual_result_from_linkedin"><strong>get_individual_result_from_linkedin</strong></a>(url, driver)</dt><dd><tt>Scrape&nbsp;data&nbsp;from&nbsp;linkedin&nbsp;and&nbsp;create&nbsp;a&nbsp;dictionary&nbsp;with&nbsp;user&nbsp;profile&nbsp;details<br>
+&nbsp;<br>
+Parameters:<br>
+url:&nbsp;url&nbsp;for&nbsp;which&nbsp;scrapping&nbsp;will&nbsp;happen<br>
+driver:&nbsp;Selenium&nbsp;web&nbsp;driver<br>
+&nbsp;<br>
+Returns:<br>
+Dict:&nbsp;A&nbsp;dictionary&nbsp;with&nbsp;user&nbsp;profile&nbsp;details</tt></dd></dl>
+ <dl><dt><a name="-get_proxies"><strong>get_proxies</strong></a>()</dt><dd><tt>Get&nbsp;proxies&nbsp;to&nbsp;avoid&nbsp;blocking<br>
+&nbsp;<br>
+Parameters:<br>
+None<br>
+&nbsp;<br>
+Returns:<br>
+List:List&nbsp;of&nbsp;proxies</tt></dd></dl>
+ <dl><dt><a name="-home"><strong>home</strong></a>(request)</dt><dd><tt>Request&nbsp;to&nbsp;load&nbsp;landing&nbsp;page<br>
+&nbsp;<br>
+Parameters:<br>
+request&nbsp;:&nbsp;HTTP&nbsp;request<br>
+&nbsp;<br>
+Returns:<br>
+Landing&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-login_to_linkedIn"><strong>login_to_linkedIn</strong></a>(driver, username, password)</dt><dd><tt>Helper&nbsp;method&nbsp;to&nbsp;login&nbsp;to&nbsp;linkedin<br>
+&nbsp;<br>
+Parameters:<br>
+driver:&nbsp;Selenium&nbsp;driver<br>
+username:&nbsp;Linkedin&nbsp;user&nbsp;id<br>
+password:&nbsp;Linkedin&nbsp;password</tt></dd></dl>
+ <dl><dt><a name="-result"><strong>result</strong></a>(request, query)</dt><dd><tt>As&nbsp;per&nbsp;the&nbsp;user&nbsp;slection&nbsp;on&nbsp;UI,&nbsp;the&nbsp;result&nbsp;will&nbsp;be&nbsp;shown&nbsp;in&nbsp;a&nbsp;new&nbsp;web&nbsp;page.<br>
+Data&nbsp;will&nbsp;be&nbsp;taken&nbsp;from&nbsp;database<br>
+&nbsp;<br>
+Parameters:<br>
+request&nbsp;:&nbsp;HTTP&nbsp;request<br>
+query:&nbsp;User&nbsp;selection&nbsp;for&nbsp;certifications<br>
+&nbsp;<br>
+Returns:<br>
+Returns&nbsp;result&nbsp;page&nbsp;on&nbsp;UI</tt></dd></dl>
+ <dl><dt><a name="-rfp_result"><strong>rfp_result</strong></a>(request)</dt><dd><tt>Request&nbsp;to&nbsp;load&nbsp;RFP&nbsp;results<br>
+&nbsp;<br>
+Parameters:<br>
+request&nbsp;:&nbsp;HTTP&nbsp;request<br>
+&nbsp;<br>
+Returns:<br>
+returns&nbsp;RFP&nbsp;result&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-update_result"><strong>update_result</strong></a>(request, query)</dt><dd><tt>Update&nbsp;the&nbsp;profiles&nbsp;exist&nbsp;in&nbsp;database<br>
+&nbsp;<br>
+Parameters:<br>
+request:&nbsp;HTTP&nbsp;request<br>
+query:&nbsp;User&nbsp;selection&nbsp;from&nbsp;UI<br>
+&nbsp;<br>
+Returns:<br>
+Returns&nbsp;a&nbsp;result&nbsp;page&nbsp;with&nbsp;values</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>proxies</strong> = []<br>
+<strong>ua</strong> = &lt;fake_useragent.fake.FakeUserAgent object&gt;</td></tr></table>
+</body></html>
